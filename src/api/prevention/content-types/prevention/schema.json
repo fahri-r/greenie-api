@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "preventions",
+  "info": {
+    "singularName": "prevention",
+    "pluralName": "preventions",
+    "displayName": "Prevention"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "disease": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::disease.disease",
+      "mappedBy": "prevention"
+    }
+  }
+}

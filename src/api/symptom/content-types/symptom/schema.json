@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "symptoms",
+  "info": {
+    "singularName": "symptom",
+    "pluralName": "symptoms",
+    "displayName": "Symptom",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "plant_part": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::plant-part.plant-part",
+      "inversedBy": "symptoms"
+    },
+    "disease": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::disease.disease",
+      "inversedBy": "symptoms"
+    }
+  }
+}
